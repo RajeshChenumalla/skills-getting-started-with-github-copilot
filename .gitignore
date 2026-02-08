@@ -44,3 +44,16 @@ __pycache__/
 /.vs/skills-getting-started-with-github-copilot/FileContentIndex
 /.vs/skills-getting-started-with-github-copilot/v17
 /.vs
+
+# .NET
+Backend/bin/
+Backend/obj/
+
+# Angular / Node.js
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.angular/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
