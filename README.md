@@ -7,7 +7,7 @@ A modern web application that allows students to view and sign up for extracurri
 ## Tech Stack
 
 ### Backend
-- **ASP.NET Core Web API** (.NET 10.0)
+- **ASP.NET Core Web API** (.NET 8.0)
 - RESTful API design
 - In-memory data storage
 
@@ -33,7 +33,7 @@ A modern web application that allows students to view and sign up for extracurri
 
 ### Prerequisites
 
-- [.NET SDK 10.0](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+- [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) or higher
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [Angular CLI](https://angular.dev/tools/cli) (`npm install -g @angular/cli`)
 
