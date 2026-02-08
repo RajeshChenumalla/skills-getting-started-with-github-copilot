@@ -1,0 +1,58 @@
+<header>
+  <h1>Mergington High School</h1>
+  <h2>Extracurricular Activities</h2>
+</header>
+
+<main>
+  <section id="activities-container">
+    <h3>Available Activities</h3>
+    <div id="activities-list">
+      <div *ngIf="activities.length === 0">
+        <p>Loading activities...</p>
+      </div>
+      <div *ngFor="let activity of activities" class="activity-card">
+        <h4>{{ activity.name }}</h4>
+        <p>{{ activity.details.description }}</p>
+        <p><strong>Schedule:</strong> {{ activity.details.schedule }}</p>
+        <p><strong>Availability:</strong> {{ getSpotsLeft(activity.details) }} spots left</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup-container">
+    <h3>Sign Up for an Activity</h3>
+    <form id="signup-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Student Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          [(ngModel)]="email"
+          name="email"
+          required 
+          placeholder="your-email@mergington.edu" />
+      </div>
+      <div class="form-group">
+        <label for="activity">Select Activity:</label>
+        <select 
+          id="activity" 
+          [(ngModel)]="selectedActivity"
+          name="activity"
+          required>
+          <option value="">-- Select an activity --</option>
+          <option *ngFor="let activity of activities" [value]="activity.name">
+            {{ activity.name }}
+          </option>
+        </select>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div *ngIf="message" [class]="messageType" class="message">
+      {{ message }}
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2023 Mergington High School</p>
+</footer>
